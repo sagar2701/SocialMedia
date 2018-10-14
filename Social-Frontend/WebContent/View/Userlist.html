@@ -1,0 +1,33 @@
+<div class="container">
+<b>List of User details</b>
+<br>
+<span style="color: red">{{err.errorMsg}}</span>
+
+<table class="table table-striped" border="1">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>firstname</th>
+			<th>password</th>
+			<th>email</th>
+			<th>Userid</th>
+			<th>Status</th>
+		</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="u in users">
+	<td>{{u.id}}</td>
+	<td>{{u.firstname}}</td>
+	<td>{{u.password}}</td>
+	<td>{{u.email}}</td>
+	<td>{{u.userid}}</td>
+	<td>{{u.Status}}</td>
+	<td><a href=""><span class="glyphicon glyphicon-info-sign"></span></a>
+	<a ng-click="deleteUser(u.id)"><span class="glyphicon glyphicon-trash"></span></a>
+	<a href=""><span class="glyphicon glyphicon-pencil"></span></a>
+	</td>
+	</tr>
+	</tbody>
+
+</table>
+</div>

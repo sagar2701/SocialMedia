@@ -1,0 +1,19 @@
+<b>Blog Post Form</b> 
+<meta charset="ISO-8859-1">
+<form>
+<table>
+<tr>
+<td>Enter Blog Title</td>
+<td><input type="text" ng-model="blog.blogname"></td>
+</tr>
+<tr>
+<td>Enter blog content</td>
+<td><textarea ng-model="blog.blogContent"></textarea></td>
+</tr>
+<tr>
+<td>
+<button ng-click="addBlog(blog)">Add Blog</button>
+</td>
+</tr>
+</table>
+</form>

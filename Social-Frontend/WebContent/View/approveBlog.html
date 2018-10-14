@@ -1,0 +1,23 @@
+<div class="panel panel-info">
+<div class="panel-heading">
+Blogs
+</div>
+<div class="panel-body">
+<ul style="list-style:none;">
+<li ng-repeat="blog in blogsWaitingForApproval">
+<a href="#/getblogwaitingforapproval/{{blog.blogid}}"><b>Blog Title:</b>
+{{blog.blogname}}</a><br>
+<b>Blog Content:</b>
+{{blog.blogContent}}</a><br>
+<b>Posted On:</b>
+{{blog.blogCreation | date:'dd:MM:yyyy'}}<br>
+<b>Posted By:</b>
+{{blog.postedby.firstname}} &nbsp; {{blog.postedby.lastname}}
+<hr>
+
+</li>
+</ul>
+</div>
+
+
+</div>

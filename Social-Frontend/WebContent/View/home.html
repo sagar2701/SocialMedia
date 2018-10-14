@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>{{user.firstname}}</h1>
+<h2>Role:{{user.role}}</h2>
+<br>
+<a href="#/uploadprofilepic"><img src="http://localhost:8081/middleware/project/getimage?email={{user.email}}" alt="Profile Pic" height="150px" width="120px"></a>
+<br>
+<form>
+<table>
+<tr>
+<td>Enter Blog Title</td>
+<td><input type="text" ng-model="blog.blogname"></td>
+</tr>
+<tr>
+<td>Enter blog content</td>
+<td><textarea ng-model="blog.blogContent"></textarea></td>
+</tr>
+<tr>
+<td>
+<button ng-click="addBlog(blog)">Add Blog</button>
+</td>
+</tr>
+</table>
+</form>
+<br>
+<div class="panel panel-info">
+<h3>List of friends</h3>
+<div class="panel-body">
+<ul style="list-style:none;">
+<li ng-repeat="friendDetail   in   friendsDetails"><!-- Type of friendDetail is User -->
+{{friendDetail.email}}<br>
+{{friendDetail.firstname}}&nbsp;{{friendDetail.lastname}}<br>
+{{friendDetail.mobile}}<br>
+{{friendDetail.role}}<br>
+<hr>
+</li>
+</ul>
+</div>
+</div>
+</body>
+</html>
